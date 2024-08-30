@@ -1,4 +1,4 @@
-package com.darryncampbell.cordova.plugin.intent;
+package com.cedar.cordova.plugin.intent;
 
 import android.Manifest;
 import android.app.Activity;
@@ -156,7 +156,7 @@ public class IntentShim extends CordovaPlugin {
             }
 
             //  Add any specified Data Schemes
-            //  https://github.com/darryncampbell/darryncampbell-cordova-plugin-intent/issues/24
+            //  https://github.com/cedarwu/cordova-plugin-intent/issues/24
             JSONArray filterDataSchemes = obj.has("filterDataSchemes") ? obj.getJSONArray("filterDataSchemes") : null;
             if (filterDataSchemes != null && filterDataSchemes.length() > 0)
             {
@@ -240,7 +240,7 @@ public class IntentShim extends CordovaPlugin {
         else if (action.equals("sendResult"))
         {
             //  Assuming this application was started with startActivityForResult, send the result back
-            //  https://github.com/darryncampbell/darryncampbell-cordova-plugin-intent/issues/3
+            //  https://github.com/cedarwu/cordova-plugin-intent/issues/3
             Intent result = new Intent();
             if (args.length() > 0) {
                 JSONObject json = args.getJSONObject(0);
@@ -350,7 +350,7 @@ public class IntentShim extends CordovaPlugin {
                     callbackContext.error("File not found: " + uriAsFile.toString());
                     return null;
                 }
-                String PACKAGE_NAME = this.cordova.getActivity().getPackageName() + ".darryncampbell.cordova.plugin.intent.fileprovider";
+                String PACKAGE_NAME = this.cordova.getActivity().getPackageName() + ".cedarwu.cordova.plugin.intent.fileprovider";
                 Uri uri = FileProvider.getUriForFile(this.cordova.getActivity().getApplicationContext(), PACKAGE_NAME, uriAsFile);
                 return uri;
             }

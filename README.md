@@ -33,7 +33,7 @@ An example application is available at https://github.com/darryncampbell/plugin-
 ## Installation
 
 ### Cordova Version < 7
-    cordova plugin add https://github.com/darryncampbell/darryncampbell-cordova-plugin-intent.git
+    cordova plugin add https://github.com/cedarwu/cordova-plugin-intent.git
 
 ### Cordova Version >= 7
     cordova plugin add com-darryncampbell-cordova-plugin-intent
@@ -61,8 +61,8 @@ Register a broadcast receiver for two filters:
 
     window.plugins.intentShim.registerBroadcastReceiver({
         filterActions: [
-            'com.darryncampbell.cordova.plugin.broadcastIntent.ACTION',
-            'com.darryncampbell.cordova.plugin.broadcastIntent.ACTION_2'
+            'com.cedarwu.cordova.plugin.broadcastIntent.ACTION',
+            'com.cedarwu.cordova.plugin.broadcastIntent.ACTION_2'
             ]
         },
         function(intent) {
@@ -113,7 +113,7 @@ Send a broadcast intent to a specified action that contains a random number in t
 
     window.plugins.intentShim.startActivity(
         {
-            action: "com.darryncampbell.cordova.plugin.intent.ACTION",
+            action: "com.cedarwu.cordova.plugin.intent.ACTION",
             extras: {
                     'random.number': Math.floor((Math.random() * 1000) + 1)
             }
