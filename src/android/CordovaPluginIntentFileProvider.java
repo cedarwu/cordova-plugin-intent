@@ -1,4 +1,4 @@
-package com.cedar.cordova.plugin.intent;
+package com.cedarwu.cordova.plugin.intent;
 
 public class CordovaPluginIntentFileProvider extends androidx.core.content.FileProvider {
 }

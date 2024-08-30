@@ -1,4 +1,4 @@
-package com.cedar.cordova.plugin.intent;
+package com.cedarwu.cordova.plugin.intent;
 
 import android.Manifest;
 import android.app.Activity;
