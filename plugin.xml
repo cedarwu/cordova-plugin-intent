@@ -29,8 +29,8 @@
         </config-file>
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <provider
-                android:name="cordova.plugin.intent.CordovaPluginIntentFileProvider"
-                android:authorities="${applicationId}.cordova.plugin.intent.fileprovider"
+                android:name="com.cedarwu.cordova.plugin.intent.CordovaPluginIntentFileProvider"
+                android:authorities="${applicationId}.cedarwu.cordova.plugin.intent.fileprovider"
                 android:exported="false"
                 android:grantUriPermissions="true">
                 <meta-data
