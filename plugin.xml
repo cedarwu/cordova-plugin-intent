@@ -15,19 +15,19 @@
                 <param name="onload" value="true"/>
             </feature>
         </config-file>
-        <edit-config file="AndroidManifest.xml" target="/manifest/application/activity" mode="merge">
+        <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
             <intent-filter>
                 <action android:name="com.darryncampbell.cordova.plugin.intent.ACTION" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </edit-config>
-        <edit-config file="AndroidManifest.xml" target="/manifest" mode="merge">
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-        </edit-config>
-        <edit-config file="AndroidManifest.xml" target="/manifest" mode="merge">
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest">
             <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
-        </edit-config>
-        <edit-config file="AndroidManifest.xml" target="/manifest/application" mode="merge">
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <provider
                 android:name="com.darryncampbell.cordova.plugin.intent.CordovaPluginIntentFileProvider"
                 android:authorities="${applicationId}.darryncampbell.cordova.plugin.intent.fileprovider"
@@ -37,7 +37,7 @@
                     android:name="android.support.FILE_PROVIDER_PATHS"
                     android:resource="@xml/provider_paths"/>
             </provider>
-        </edit-config>
+        </config-file>
         <source-file src="src/android/IntentShim.java" target-dir="src/com/darryncampbell/plugin/intent" />
         <source-file src="src/android/CordovaPluginIntentFileProvider.java" target-dir="src/com/darryncampbell/plugin/intent" />
 		<resource-file src="src/android/res/xml/provider_paths.xml" target="res/xml/provider_paths.xml"/>
